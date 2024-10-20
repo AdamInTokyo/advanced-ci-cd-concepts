@@ -5,7 +5,7 @@
 name: Rust Code Quality
 
 on:
-  workflow_dispatch:
+  [push, pull]
 
 jobs:
   matrix_build:
@@ -19,3 +19,5 @@ jobs:
       run: cargo fmt --check
     - name: Make sure Rust builds correctly
       run: cargo build
+    - name: Test the build
+      run: cargo test
