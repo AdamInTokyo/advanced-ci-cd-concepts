@@ -21,4 +21,3 @@ jobs:
       run: cargo build
     - name: Test the build
       run: cargo test
-      run: echo "hello"
